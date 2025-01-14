@@ -69,7 +69,6 @@
 
 	<ItemGroup>
 	  <Folder Include="Models\" />
-	  <Folder Include="Controls\" />
 	  <Folder Include="ViewModels\" />
 	  <Folder Include="Templates\" />
 	</ItemGroup>
@@ -78,6 +77,15 @@
 	  <Compile Update="Pages\HomePage.xaml.cs">
 	    <DependentUpon>HomePage.xaml</DependentUpon>
 	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Pages\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\OnboardingPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
