@@ -7,7 +7,13 @@ namespace SocialMediaMaui
         public AppShell()
         {
             InitializeComponent();
+            HomeRoutes();
             RegisterRoutes();
+        }
+
+        private static void HomeRoutes()
+        {
+            Routing.RegisterRoute(nameof(HomePage), typeof(HomePage));
         }
 
         private static void RegisterRoutes()

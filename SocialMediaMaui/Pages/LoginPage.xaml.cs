@@ -9,11 +9,13 @@ public partial class LoginPage : ContentPage
 
     private async void RegisterBtn_Clicked(object sender, EventArgs e)
     {
-		await Shell.Current.GoToAsync(nameof(RegisterPage));
+        // Navigate to RegisterPage
+        await Shell.Current.GoToAsync("RegisterPage");
     }
 
     private async void LoginBtn_Clicked(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
+        // Navigate to HomePage
+        await Shell.Current.GoToAsync("HomePage");
     }
 }
