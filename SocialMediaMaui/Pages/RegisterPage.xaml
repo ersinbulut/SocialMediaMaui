@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SocialMediaMaui.Pages.RegisterPage"
+             xmlns:controls="clr-namespace:SocialMediaMaui.Controls"
+             Title="RegisterPage"
+             Padding="20">
+    <ScrollView>
+        <Grid 
+      RowDefinitions="Auto,Auto,Auto"
+      VerticalOptions="Center" 
+      RowSpacing="20">
+            <Image
+          Grid.Row="0"
+          HeightRequest="128" 
+          Source="social_media.png"/>
+            <Label 
+          Grid.Row="1"
+          FontAttributes="Bold"
+          FontSize="25"
+          HorizontalOptions="Center"
+          Text="Register"
+          />
+            <VerticalStackLayout Grid.Row="2" Spacing="2">
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                    <Border
+                        BackgroundColor="LightGoldenrodYellow"
+                        HeightRequest="80"
+                        StrokeShape="RoundRectangle 40"
+                        WidthRequest="80">
+                        <Image
+                            Source="user.png"
+                            HeightRequest="80"
+                            Aspect="Center"
+                            WidthRequest="80"/>
+                    </Border>
+                    <Button Text="Choose Photo" VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+                <Label Text="Name" Style="{StaticResource formlabel}"/>
+                <controls:NoBorderEntry  Placeholder="Enter Name"/>
+                <controls:Spacer/>
+
+                <Label Text="Email" Style="{StaticResource formlabel}"/>
+                <controls:NoBorderEntry  Placeholder="Enter Email"/>
+                <controls:Spacer/>
+
+                <Label Text="Password" Style="{StaticResource formlabel}"/>
+                <controls:NoBorderEntry Placeholder="Enter Password" 
+                 IsPassword="True"
+                />
+
+                <controls:Spacer/>
+                <Button Text="Register" Style="{StaticResource rounded}" />
+                <controls:Spacer/>
+
+                <Grid ColumnDefinitions="*, Auto,*" ColumnSpacing="5">
+                    <BoxView Grid.Column="0" Style="{StaticResource fadedLine}"/>
+                    <Label Grid.Column="1" HorizontalOptions="Center" Text="Existing User?"/>
+                    <BoxView Grid.Column="2" Style="{StaticResource fadedLine}"/>
+                </Grid>
+
+                <controls:Spacer/>
+                <Button Text="Login" Style="{StaticResource rounded}"
+                       Clicked="Button_Clicked"/>
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>
